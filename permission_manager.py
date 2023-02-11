@@ -1,17 +1,17 @@
 from run_command import CommandHandler
-
+from dataclasses import dataclass
 import config
 
 import os
+import logging
 import stat
 
-
+@dataclass
 class PermissionManager:
     """class that manages linux file permissions"""
-    def __init__(self):
-        self.logger = config.logger
-        self.logger.info("create an instance of PermissionManager")
-        self.command_handler = CommandHandler()
+    logger: logging.Logger= config.logger
+    logger.info("create an instance of PermissionManager")
+    command_handler = CommandHandler()
 
     def change_path_permissions(self, path: str, permissions: str):
         """change a file permission to the desired permission
@@ -24,9 +24,8 @@ class PermissionManager:
         self.logger.debug(f"permissions before changing: {stat.filemode(os.stat(path).st_mode)}")
         self.command_handler.run_shell_command_as_root(command=f"chmod {permissions} {path}")
         self.logger.debug(f"permissions after changing: {stat.filemode(os.stat(path).st_mode)}")
-        self.logger.info(f"changed permission of {path}")
+        self.logger.debug(f"changed permission of {path}")
 
-    
 
 
 if __name__ == "__main__":
@@ -36,4 +35,3 @@ if __name__ == "__main__":
     permission_manager = PermissionManager()
     permission_manager.change_path_permissions(path, "o+w")
     os.remove(path)
-        

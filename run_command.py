@@ -1,13 +1,13 @@
 from password_helper import get_root_password
-
+from dataclasses import dataclass
 import config
 
 import subprocess
 
+@dataclass
 class CommandHandler:
-    def __init__(self):
-        self.logger= config.logger
-        self.logger.info("create instance of CommandHandler")
+    logger= config.logger
+    logger.info("create instance of CommandHandler")
 
     def run_shell_command_with_input(self, command: str, input: str):
         """run shell command as root .eg. with password as input
@@ -49,7 +49,7 @@ class CommandHandler:
         except Exception as e: 
             raise RuntimeError(f"Error running shell command: {e}")
         else:
-            self.logger.info(f"Shell command run as root successfully. command: {command}")
+            self.logger.debug(f"Shell command run as root successfully. command: {command}")
 
 
 if __name__ == "__main__":

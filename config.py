@@ -17,3 +17,5 @@ file_handler.setFormatter(formatter)
 
 logger.addHandler(console)
 logger.addHandler(file_handler)
+
+print(type(logger))
