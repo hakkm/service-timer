@@ -1,0 +1,15 @@
+# Cache files
+__pycache__
+
+# VSCODE
+.vscode
+
+# Environment
+env
+
+# log
+log
+
+# testing
+testing
+test.py
