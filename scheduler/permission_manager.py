@@ -9,7 +9,7 @@ import stat
 @dataclass
 class PermissionManager:
     """class that manages linux file permissions"""
-    logger: logging.Logger= config.logger
+    logger: logging.Logger = config.logger
     logger.info("create an instance of PermissionManager")
     command_handler = CommandHandler()
 

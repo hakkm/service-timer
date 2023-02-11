@@ -1,7 +1,6 @@
 
 # todo: customization to _save_origin....
 import config
-from dataclasses import dataclass
 from permission_manager import PermissionManager
 
 import os
@@ -49,6 +48,13 @@ class FileManager:
         with open(f"{self.file_full_path}", "w") as service_file:
             service_file.write(content)
             self.logger.debug("create and fill file")
+            # change permission of file to writable
+            self.permission_manager.change_path_permissions(
+                self.file_full_path,
+                'o+w'
+            )
+
+        
 
         # change /etc/systemd/system permission to it's origin
         self.logger.debug(f"change permission back of {self.SYSTEMD_SYSTEM_DIR}")

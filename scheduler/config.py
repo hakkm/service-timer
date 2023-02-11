@@ -18,4 +18,6 @@ file_handler.setFormatter(formatter)
 logger.addHandler(console)
 logger.addHandler(file_handler)
 
-print(type(logger))
+
+if __name__ == "__main__":
+    print(type(logger))

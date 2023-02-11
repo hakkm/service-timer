@@ -3,7 +3,7 @@ from service import ServiceManager
 from run_command import CommandHandler 
 import config
 
-from datetime import datetime
+import os
 
 class TimerManager:
     """_summary_
@@ -26,10 +26,10 @@ class TimerManager:
         self.command_handler = CommandHandler()
 
 
-    def create_activate_timer(self):
+    def create_timer(self):
         self.logger.debug(f"create timer file {self.filename}")
         self.file_manager.create_file(self._get_timer_text())
-        self.logger.debug(f"created timer file {self.filename}")
+        self.logger.info(f"created timer file {self.filename}")
 
 
     def _get_timer_text(self):
@@ -57,5 +57,13 @@ WantedBy=multi-user.target
 
         self.logger.info("timer is set successfully")
 
+
 if __name__ == '__main__':
-    
+    title = 'tes1'
+    sm = ServiceManager(f"{title}.service", "ls")
+    sm.create_service_file()
+    tm = TimerManager(f"{title}.timer", on_calendar="12:12:12", service_manager=sm)
+    tm.create_timer()
+    os.remove(f'/etc/systemd/system/{title}.service')
+    os.remove(f'/etc/systemd/system/{title}.timer')
+
