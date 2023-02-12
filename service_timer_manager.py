@@ -2,19 +2,37 @@ from timer import TimerManager
 from service import ServiceManager
 
 from dataclasses import dataclass
-from datetime import datetime
 
 
 @dataclass(kw_only=True)
 class ServiceTimerManager:
     # todo: manage directory when you put services and timers.
-    service_filename: str 
-    service_description: str
-    command: str
+    # todo: what to do
+    title: str = None
 
-    timer_filename: str
-    timer_description: str
+    service_filename: str = None
+    service_description: str = None
+    command_to_run: str
+
+    timer_filename: str = None
+    timer_description: str = None
     on_calendar: str
+
+    def __post_init__(self):
+        if self.title:
+            self.service_filename = f"{self.title.replace(' ', '_')}.service"
+            self.service_description = self.title
+            self.timer_filename = f"{self.title.replace(' ', '_')}.timer"
+            self.timer_description = self.title
+        elif not (
+            self.service_filename,
+            self.service_description,
+            self.timer_filename,
+            self.timer_description,
+        ):
+            raise ValueError(
+                "You must provide either a title or all service and timer attributes"
+            )
 
     def schedule(self):
         self._create_service()

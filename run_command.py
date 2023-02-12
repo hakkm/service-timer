@@ -42,7 +42,7 @@ class CommandHandler:
         """
         self.logger.debug("run_shell_command_as_root() function called")
         if get_root_password() == None:
-            raise RuntimeError("ROOT_PASSWORD is not is PATH.")
+            raise RuntimeError("ROOT_PASSWORD is not set.")
 
         try:
             self.run_shell_command_with_input(command, get_root_password())
