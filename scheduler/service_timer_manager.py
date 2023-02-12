@@ -15,6 +15,8 @@ class ServiceTimerManager:
     timer_filename: str
     timer_description: str
     on_calendar: str
+    
+    overwrite: bool = False
 
     def schedule(self):
         self._create_service()
@@ -25,7 +27,8 @@ class ServiceTimerManager:
         self.service_manager = ServiceManager(
             filename=self.service_filename, 
             description=self.service_description, 
-            command=self.command_to_run
+            command=self.command,
+            overwrite=self.overwrite,
         )
         self.service_manager.create_service_file()
 
@@ -37,12 +40,3 @@ class ServiceTimerManager:
             service_manager=self.service_manager,
         )
         self.timer_manager.create_timer()
-
-
-if __name__ == "__main__":
-    service_timer_manager = ServiceTimerManager(
-        title="shutdown my pc",
-        command_to_run="systemctl suspend -i",
-        on_calendar="18:05:00",
-    )
-    service_timer_manager.schedule()
