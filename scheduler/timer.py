@@ -6,7 +6,7 @@ import config
 import os
 
 class TimerManager:
-    """_summary_
+    """
 
     Args:
         service_manager (ServiceManager): service manager instance linked to
@@ -14,7 +14,7 @@ class TimerManager:
         description (str): timer_description
     """
     def __init__(self, filename:str, on_calendar: str, service_manager: ServiceManager,description: str = '') -> None:
-        self.logger = config.logger
+        self.logger = config.get_logger(__name__)
         self.logger.info("created instance of TimerManager")
 
         self.filename = filename
@@ -22,7 +22,7 @@ class TimerManager:
         self.on_calendar = on_calendar
         self.service_manager: ServiceManager = service_manager
 
-        self.file_manager = FileManager(file_name=self.filename)
+        self.file_manager = FileManager(filename=self.filename)
         self.command_handler = CommandHandler()
 
 
@@ -35,6 +35,8 @@ class TimerManager:
     def _get_timer_text(self):
         return f"""[Unit]
 Description={self.description}
+Requires={self.service_manager.filename}
+
 
 [Timer]
 OnCalendar={self.on_calendar}
@@ -59,7 +61,7 @@ WantedBy=multi-user.target
 
 
 if __name__ == '__main__':
-    title = 'tes1'
+    title = 'tes'
     sm = ServiceManager(f"{title}.service", "ls")
     sm.create_service_file()
     tm = TimerManager(f"{title}.timer", on_calendar="12:12:12", service_manager=sm)

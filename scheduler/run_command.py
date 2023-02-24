@@ -6,7 +6,7 @@ import subprocess
 
 @dataclass
 class CommandHandler:
-    logger= config.logger
+    logger = config.get_logger(__name__)
     logger.info("create instance of CommandHandler")
 
     def run_shell_command_with_input(self, command: str, input: str):

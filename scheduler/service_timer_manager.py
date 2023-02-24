@@ -2,18 +2,17 @@ from timer import TimerManager
 from service import ServiceManager
 
 from dataclasses import dataclass
-from datetime import datetime
 
 
 @dataclass(kw_only=True)
 class ServiceTimerManager:
     # todo: manage directory when you put services and timers.
     service_filename: str 
-    service_description: str
+    service_description: str = ""
     command: str
 
     timer_filename: str
-    timer_description: str
+    timer_description: str = ""
     on_calendar: str
     
     overwrite: bool = False

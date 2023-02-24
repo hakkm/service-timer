@@ -9,7 +9,7 @@ import stat
 @dataclass
 class PermissionManager:
     """class that manages linux file permissions"""
-    logger: logging.Logger = config.logger
+    logger = config.get_logger(__name__)
     logger.info("create an instance of PermissionManager")
     command_handler = CommandHandler()
 
@@ -25,6 +25,10 @@ class PermissionManager:
         self.command_handler.run_shell_command_as_root(command=f"chmod {permissions} {path}")
         self.logger.debug(f"permissions after changing: {stat.filemode(os.stat(path).st_mode)}")
         self.logger.debug(f"changed permission of {path}")
+
+    def is_writable(self, path: str):
+        return True if os.access(path, os.W_OK) else False
+        
 
 
 
