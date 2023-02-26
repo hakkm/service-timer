@@ -20,3 +20,7 @@ main.py
 
 # uml
 code_structure.md
+
+# build
+dist 
+SchedulerX.egg-info
