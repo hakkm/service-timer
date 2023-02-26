@@ -1,3 +1,17 @@
+Metadata-Version: 2.1
+Name: SchedulerX
+Version: 0.0.1
+Summary: Schedule a task using systemd services and timer
+Author-email: Khabir Abdelhakim <hakim1khabir2@gmail.com>
+Project-URL: Homepage, https://github.com/hakkm/service-timer
+Project-URL: Bug Tracker, https://github.com/hakkm/service-timer/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 # SchedulerX
 
 ## Authors
