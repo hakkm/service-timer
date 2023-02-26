@@ -1,4 +1,6 @@
-# Scheduler
+
+![Logo](https://github/hakkm/service-timer/Scheduler.png)
+# SchedulerX
 
 ## Installation
 
