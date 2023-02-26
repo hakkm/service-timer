@@ -1,0 +1,188 @@
+2023-02-26 13:52   scheduler.run_command -> CommandHandler                 INFO     create instance of CommandHandler
+2023-02-26 13:52   scheduler.permission_manager -> PermissionManager              INFO     create an instance of PermissionManager
+2023-02-26 13:52   SimpleScheduler      -> __init__                       INFO     create instance of SimpleScheduler
+2023-02-26 13:52   SimpleScheduler      -> schedule                       INFO     create instance of ServiceTimerManager
+2023-02-26 13:52   SimpleScheduler      -> schedule                       INFO     created instance of ServiceTimerManager
+2023-02-26 13:52   scheduler.service    -> __init__                       INFO     create an instance of ServiceManager
+2023-02-26 13:52   scheduler.service    -> create_service_file            INFO     create service file
+2023-02-26 13:52   scheduler.file_manager -> __init__                       INFO     create instance of FileManager
+2023-02-26 13:52   scheduler.file_manager -> create_file                    DEBUG    change permission to writable of /etc/systemd/system 
+2023-02-26 13:52   scheduler.permission_manager -> change_path_permissions        DEBUG    change_path_permissions method from PermissionManager is called
+2023-02-26 13:52   scheduler.permission_manager -> change_path_permissions        DEBUG    permissions before changing: drwxr-xr-x
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_as_root      DEBUG    run_shell_command_as_root() function called
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_with_input   DEBUG    run_shell_command_with_input() func is called
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_with_input   DEBUG    process is created: stdout:  || stderr: Password: 
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_as_root      DEBUG    Shell command run as root successfully. command: chmod o+w /etc/systemd/system
+2023-02-26 13:52   scheduler.permission_manager -> change_path_permissions        DEBUG    permissions after changing: drwxr-xrwx
+2023-02-26 13:52   scheduler.permission_manager -> change_path_permissions        DEBUG    changed permission of /etc/systemd/system
+2023-02-26 13:52   scheduler.file_manager -> create_file                    DEBUG    changed permission to writable of /etc/systemd/system 
+2023-02-26 13:52   scheduler.file_manager -> create_file                    DEBUG    create and fill file
+2023-02-26 13:52   scheduler.permission_manager -> change_path_permissions        DEBUG    change_path_permissions method from PermissionManager is called
+2023-02-26 13:52   scheduler.permission_manager -> change_path_permissions        DEBUG    permissions before changing: -rw-rw-rw-
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_as_root      DEBUG    run_shell_command_as_root() function called
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_with_input   DEBUG    run_shell_command_with_input() func is called
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_with_input   DEBUG    process is created: stdout:  || stderr: Password: 
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_as_root      DEBUG    Shell command run as root successfully. command: chmod o+w /etc/systemd/system/obsidian.service
+2023-02-26 13:52   scheduler.permission_manager -> change_path_permissions        DEBUG    permissions after changing: -rw-rw-rw-
+2023-02-26 13:52   scheduler.permission_manager -> change_path_permissions        DEBUG    changed permission of /etc/systemd/system/obsidian.service
+2023-02-26 13:52   scheduler.file_manager -> create_file                    DEBUG    change permission back of /etc/systemd/system
+2023-02-26 13:52   scheduler.permission_manager -> change_path_permissions        DEBUG    change_path_permissions method from PermissionManager is called
+2023-02-26 13:52   scheduler.permission_manager -> change_path_permissions        DEBUG    permissions before changing: drwxr-xrwx
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_as_root      DEBUG    run_shell_command_as_root() function called
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_with_input   DEBUG    run_shell_command_with_input() func is called
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_with_input   DEBUG    process is created: stdout:  || stderr: Password: 
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_as_root      DEBUG    Shell command run as root successfully. command: chmod o-w /etc/systemd/system
+2023-02-26 13:52   scheduler.permission_manager -> change_path_permissions        DEBUG    permissions after changing: drwxr-xr-x
+2023-02-26 13:52   scheduler.permission_manager -> change_path_permissions        DEBUG    changed permission of /etc/systemd/system
+2023-02-26 13:52   scheduler.file_manager -> create_file                    INFO     created /etc/systemd/system/obsidian.service successfully
+2023-02-26 13:52   scheduler.service    -> create_service_file            INFO     created service file
+2023-02-26 13:52   scheduler.timer      -> __init__                       INFO     created instance of TimerManager
+2023-02-26 13:52   scheduler.file_manager -> __init__                       INFO     create instance of FileManager
+2023-02-26 13:52   scheduler.file_manager -> __init__                       INFO     create instance of FileManager
+2023-02-26 13:52   scheduler.timer      -> create_timer                   DEBUG    create timer file obsidian.timer
+2023-02-26 13:52   scheduler.file_manager -> create_file                    DEBUG    change permission to writable of /etc/systemd/system 
+2023-02-26 13:52   scheduler.file_manager -> create_file                    DEBUG    change permission to writable of /etc/systemd/system 
+2023-02-26 13:52   scheduler.permission_manager -> change_path_permissions        DEBUG    change_path_permissions method from PermissionManager is called
+2023-02-26 13:52   scheduler.permission_manager -> change_path_permissions        DEBUG    permissions before changing: drwxr-xr-x
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_as_root      DEBUG    run_shell_command_as_root() function called
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_with_input   DEBUG    run_shell_command_with_input() func is called
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_with_input   DEBUG    process is created: stdout:  || stderr: Password: 
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_as_root      DEBUG    Shell command run as root successfully. command: chmod o+w /etc/systemd/system
+2023-02-26 13:52   scheduler.permission_manager -> change_path_permissions        DEBUG    permissions after changing: drwxr-xrwx
+2023-02-26 13:52   scheduler.permission_manager -> change_path_permissions        DEBUG    changed permission of /etc/systemd/system
+2023-02-26 13:52   scheduler.file_manager -> create_file                    DEBUG    changed permission to writable of /etc/systemd/system 
+2023-02-26 13:52   scheduler.file_manager -> create_file                    DEBUG    changed permission to writable of /etc/systemd/system 
+2023-02-26 13:52   scheduler.file_manager -> create_file                    DEBUG    create and fill file
+2023-02-26 13:52   scheduler.file_manager -> create_file                    DEBUG    create and fill file
+2023-02-26 13:52   scheduler.permission_manager -> change_path_permissions        DEBUG    change_path_permissions method from PermissionManager is called
+2023-02-26 13:52   scheduler.permission_manager -> change_path_permissions        DEBUG    permissions before changing: -rw-rw-rw-
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_as_root      DEBUG    run_shell_command_as_root() function called
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_with_input   DEBUG    run_shell_command_with_input() func is called
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_with_input   DEBUG    process is created: stdout:  || stderr: Password: 
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_as_root      DEBUG    Shell command run as root successfully. command: chmod o+w /etc/systemd/system/obsidian.timer
+2023-02-26 13:52   scheduler.permission_manager -> change_path_permissions        DEBUG    permissions after changing: -rw-rw-rw-
+2023-02-26 13:52   scheduler.permission_manager -> change_path_permissions        DEBUG    changed permission of /etc/systemd/system/obsidian.timer
+2023-02-26 13:52   scheduler.file_manager -> create_file                    DEBUG    change permission back of /etc/systemd/system
+2023-02-26 13:52   scheduler.file_manager -> create_file                    DEBUG    change permission back of /etc/systemd/system
+2023-02-26 13:52   scheduler.permission_manager -> change_path_permissions        DEBUG    change_path_permissions method from PermissionManager is called
+2023-02-26 13:52   scheduler.permission_manager -> change_path_permissions        DEBUG    permissions before changing: drwxr-xrwx
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_as_root      DEBUG    run_shell_command_as_root() function called
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_with_input   DEBUG    run_shell_command_with_input() func is called
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_with_input   DEBUG    process is created: stdout:  || stderr: Password: 
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_as_root      DEBUG    Shell command run as root successfully. command: chmod o-w /etc/systemd/system
+2023-02-26 13:52   scheduler.permission_manager -> change_path_permissions        DEBUG    permissions after changing: drwxr-xr-x
+2023-02-26 13:52   scheduler.permission_manager -> change_path_permissions        DEBUG    changed permission of /etc/systemd/system
+2023-02-26 13:52   scheduler.file_manager -> create_file                    INFO     created /etc/systemd/system/obsidian.timer successfully
+2023-02-26 13:52   scheduler.file_manager -> create_file                    INFO     created /etc/systemd/system/obsidian.timer successfully
+2023-02-26 13:52   scheduler.timer      -> create_timer                   INFO     created timer file obsidian.timer
+2023-02-26 13:52   scheduler.timer      -> start_timer                    DEBUG    reload daemon process
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_as_root      DEBUG    run_shell_command_as_root() function called
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_with_input   DEBUG    run_shell_command_with_input() func is called
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_with_input   DEBUG    process is created: stdout:  || stderr: Password: 
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_as_root      DEBUG    Shell command run as root successfully. command: systemctl daemon-reload
+2023-02-26 13:52   scheduler.timer      -> start_timer                    DEBUG    start timer
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_as_root      DEBUG    run_shell_command_as_root() function called
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_with_input   DEBUG    run_shell_command_with_input() func is called
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_with_input   DEBUG    process is created: stdout:  || stderr: Password: 
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_as_root      DEBUG    Shell command run as root successfully. command: systemctl start obsidian.timer
+2023-02-26 13:52   scheduler.timer      -> start_timer                    DEBUG    enable timer
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_as_root      DEBUG    run_shell_command_as_root() function called
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_with_input   DEBUG    run_shell_command_with_input() func is called
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_with_input   DEBUG    process is created: stdout:  || stderr: Password: 
+2023-02-26 13:52   scheduler.run_command -> run_shell_command_as_root      DEBUG    Shell command run as root successfully. command: systemctl enable obsidian.timer
+2023-02-26 13:52   scheduler.timer      -> start_timer                    INFO     timer is set successfully
+2023-02-26 13:52   SimpleScheduler      -> schedule                       INFO     schedule complete
+2023-02-26 13:55   scheduler.run_command -> CommandHandler                 INFO     create instance of CommandHandler
+2023-02-26 13:55   scheduler.permission_manager -> PermissionManager              INFO     create an instance of PermissionManager
+2023-02-26 13:55   SimpleScheduler      -> __init__                       INFO     create instance of SimpleScheduler
+2023-02-26 13:55   SimpleScheduler      -> schedule                       INFO     create instance of ServiceTimerManager
+2023-02-26 13:55   SimpleScheduler      -> schedule                       INFO     created instance of ServiceTimerManager
+2023-02-26 13:55   scheduler.service    -> __init__                       INFO     create an instance of ServiceManager
+2023-02-26 13:55   scheduler.service    -> create_service_file            INFO     create service file
+2023-02-26 13:55   scheduler.file_manager -> __init__                       INFO     create instance of FileManager
+2023-02-26 13:55   scheduler.file_manager -> create_file                    DEBUG    change permission to writable of /etc/systemd/system 
+2023-02-26 13:55   scheduler.permission_manager -> change_path_permissions        DEBUG    change_path_permissions method from PermissionManager is called
+2023-02-26 13:55   scheduler.permission_manager -> change_path_permissions        DEBUG    permissions before changing: drwxr-xr-x
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_as_root      DEBUG    run_shell_command_as_root() function called
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_with_input   DEBUG    run_shell_command_with_input() func is called
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_with_input   DEBUG    process is created: stdout:  || stderr: Password: 
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_as_root      DEBUG    Shell command run as root successfully. command: chmod o+w /etc/systemd/system
+2023-02-26 13:55   scheduler.permission_manager -> change_path_permissions        DEBUG    permissions after changing: drwxr-xrwx
+2023-02-26 13:55   scheduler.permission_manager -> change_path_permissions        DEBUG    changed permission of /etc/systemd/system
+2023-02-26 13:55   scheduler.file_manager -> create_file                    DEBUG    changed permission to writable of /etc/systemd/system 
+2023-02-26 13:55   scheduler.file_manager -> create_file                    DEBUG    create and fill file
+2023-02-26 13:55   scheduler.permission_manager -> change_path_permissions        DEBUG    change_path_permissions method from PermissionManager is called
+2023-02-26 13:55   scheduler.permission_manager -> change_path_permissions        DEBUG    permissions before changing: -rw-rw-rw-
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_as_root      DEBUG    run_shell_command_as_root() function called
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_with_input   DEBUG    run_shell_command_with_input() func is called
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_with_input   DEBUG    process is created: stdout:  || stderr: Password: 
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_as_root      DEBUG    Shell command run as root successfully. command: chmod o+w /etc/systemd/system/obsidian.service
+2023-02-26 13:55   scheduler.permission_manager -> change_path_permissions        DEBUG    permissions after changing: -rw-rw-rw-
+2023-02-26 13:55   scheduler.permission_manager -> change_path_permissions        DEBUG    changed permission of /etc/systemd/system/obsidian.service
+2023-02-26 13:55   scheduler.file_manager -> create_file                    DEBUG    change permission back of /etc/systemd/system
+2023-02-26 13:55   scheduler.permission_manager -> change_path_permissions        DEBUG    change_path_permissions method from PermissionManager is called
+2023-02-26 13:55   scheduler.permission_manager -> change_path_permissions        DEBUG    permissions before changing: drwxr-xrwx
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_as_root      DEBUG    run_shell_command_as_root() function called
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_with_input   DEBUG    run_shell_command_with_input() func is called
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_with_input   DEBUG    process is created: stdout:  || stderr: Password: 
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_as_root      DEBUG    Shell command run as root successfully. command: chmod o-w /etc/systemd/system
+2023-02-26 13:55   scheduler.permission_manager -> change_path_permissions        DEBUG    permissions after changing: drwxr-xr-x
+2023-02-26 13:55   scheduler.permission_manager -> change_path_permissions        DEBUG    changed permission of /etc/systemd/system
+2023-02-26 13:55   scheduler.file_manager -> create_file                    INFO     created /etc/systemd/system/obsidian.service successfully
+2023-02-26 13:55   scheduler.service    -> create_service_file            INFO     created service file
+2023-02-26 13:55   scheduler.timer      -> __init__                       INFO     created instance of TimerManager
+2023-02-26 13:55   scheduler.file_manager -> __init__                       INFO     create instance of FileManager
+2023-02-26 13:55   scheduler.file_manager -> __init__                       INFO     create instance of FileManager
+2023-02-26 13:55   scheduler.timer      -> create_timer                   DEBUG    create timer file obsidian.timer
+2023-02-26 13:55   scheduler.file_manager -> create_file                    DEBUG    change permission to writable of /etc/systemd/system 
+2023-02-26 13:55   scheduler.file_manager -> create_file                    DEBUG    change permission to writable of /etc/systemd/system 
+2023-02-26 13:55   scheduler.permission_manager -> change_path_permissions        DEBUG    change_path_permissions method from PermissionManager is called
+2023-02-26 13:55   scheduler.permission_manager -> change_path_permissions        DEBUG    permissions before changing: drwxr-xr-x
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_as_root      DEBUG    run_shell_command_as_root() function called
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_with_input   DEBUG    run_shell_command_with_input() func is called
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_with_input   DEBUG    process is created: stdout:  || stderr: Password: 
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_as_root      DEBUG    Shell command run as root successfully. command: chmod o+w /etc/systemd/system
+2023-02-26 13:55   scheduler.permission_manager -> change_path_permissions        DEBUG    permissions after changing: drwxr-xrwx
+2023-02-26 13:55   scheduler.permission_manager -> change_path_permissions        DEBUG    changed permission of /etc/systemd/system
+2023-02-26 13:55   scheduler.file_manager -> create_file                    DEBUG    changed permission to writable of /etc/systemd/system 
+2023-02-26 13:55   scheduler.file_manager -> create_file                    DEBUG    changed permission to writable of /etc/systemd/system 
+2023-02-26 13:55   scheduler.file_manager -> create_file                    DEBUG    create and fill file
+2023-02-26 13:55   scheduler.file_manager -> create_file                    DEBUG    create and fill file
+2023-02-26 13:55   scheduler.permission_manager -> change_path_permissions        DEBUG    change_path_permissions method from PermissionManager is called
+2023-02-26 13:55   scheduler.permission_manager -> change_path_permissions        DEBUG    permissions before changing: -rw-rw-rw-
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_as_root      DEBUG    run_shell_command_as_root() function called
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_with_input   DEBUG    run_shell_command_with_input() func is called
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_with_input   DEBUG    process is created: stdout:  || stderr: Password: 
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_as_root      DEBUG    Shell command run as root successfully. command: chmod o+w /etc/systemd/system/obsidian.timer
+2023-02-26 13:55   scheduler.permission_manager -> change_path_permissions        DEBUG    permissions after changing: -rw-rw-rw-
+2023-02-26 13:55   scheduler.permission_manager -> change_path_permissions        DEBUG    changed permission of /etc/systemd/system/obsidian.timer
+2023-02-26 13:55   scheduler.file_manager -> create_file                    DEBUG    change permission back of /etc/systemd/system
+2023-02-26 13:55   scheduler.file_manager -> create_file                    DEBUG    change permission back of /etc/systemd/system
+2023-02-26 13:55   scheduler.permission_manager -> change_path_permissions        DEBUG    change_path_permissions method from PermissionManager is called
+2023-02-26 13:55   scheduler.permission_manager -> change_path_permissions        DEBUG    permissions before changing: drwxr-xrwx
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_as_root      DEBUG    run_shell_command_as_root() function called
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_with_input   DEBUG    run_shell_command_with_input() func is called
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_with_input   DEBUG    process is created: stdout:  || stderr: Password: 
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_as_root      DEBUG    Shell command run as root successfully. command: chmod o-w /etc/systemd/system
+2023-02-26 13:55   scheduler.permission_manager -> change_path_permissions        DEBUG    permissions after changing: drwxr-xr-x
+2023-02-26 13:55   scheduler.permission_manager -> change_path_permissions        DEBUG    changed permission of /etc/systemd/system
+2023-02-26 13:55   scheduler.file_manager -> create_file                    INFO     created /etc/systemd/system/obsidian.timer successfully
+2023-02-26 13:55   scheduler.file_manager -> create_file                    INFO     created /etc/systemd/system/obsidian.timer successfully
+2023-02-26 13:55   scheduler.timer      -> create_timer                   INFO     created timer file obsidian.timer
+2023-02-26 13:55   scheduler.timer      -> start_timer                    DEBUG    reload daemon process
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_as_root      DEBUG    run_shell_command_as_root() function called
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_with_input   DEBUG    run_shell_command_with_input() func is called
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_with_input   DEBUG    process is created: stdout:  || stderr: Password: 
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_as_root      DEBUG    Shell command run as root successfully. command: systemctl daemon-reload
+2023-02-26 13:55   scheduler.timer      -> start_timer                    DEBUG    start timer
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_as_root      DEBUG    run_shell_command_as_root() function called
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_with_input   DEBUG    run_shell_command_with_input() func is called
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_with_input   DEBUG    process is created: stdout:  || stderr: Password: 
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_as_root      DEBUG    Shell command run as root successfully. command: systemctl start obsidian.timer
+2023-02-26 13:55   scheduler.timer      -> start_timer                    DEBUG    enable timer
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_as_root      DEBUG    run_shell_command_as_root() function called
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_with_input   DEBUG    run_shell_command_with_input() func is called
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_with_input   DEBUG    process is created: stdout:  || stderr: Password: 
+2023-02-26 13:55   scheduler.run_command -> run_shell_command_as_root      DEBUG    Shell command run as root successfully. command: systemctl enable obsidian.timer
+2023-02-26 13:55   scheduler.timer      -> start_timer                    INFO     timer is set successfully
+2023-02-26 13:55   SimpleScheduler      -> schedule                       INFO     schedule complete

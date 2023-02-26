@@ -5,7 +5,7 @@ def get_logger(name):
     logger = logging.getLogger(name)
     logger.setLevel(logging.DEBUG)
 
-    file_handler = logging.FileHandler(filename="log/schedule.log")
+    file_handler = logging.FileHandler(filename="scheduler/log/schedule.log")
     file_handler.setLevel(logging.DEBUG)
 
     console = logging.StreamHandler()

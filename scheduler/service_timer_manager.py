@@ -1,5 +1,5 @@
-from timer import TimerManager
-from service import ServiceManager
+from .timer import TimerManager
+from .service import ServiceManager
 
 from dataclasses import dataclass
 
@@ -37,5 +37,6 @@ class ServiceTimerManager:
             description=self.timer_description,
             on_calendar=self.on_calendar,
             service_manager=self.service_manager,
+            overwrite=self.overwrite,
         )
         self.timer_manager.create_timer()

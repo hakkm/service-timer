@@ -1,8 +1,7 @@
-import config
-from permission_manager import PermissionManager
+from .permission_manager import PermissionManager
 
 import os
-
+from . import config 
 
 
 SYSTEMD_SYSTEM_DIR = r"/etc/systemd/system"

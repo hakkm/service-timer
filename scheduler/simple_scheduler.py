@@ -1,5 +1,5 @@
-from service_timer_manager import ServiceTimerManager
-import config
+from .service_timer_manager import ServiceTimerManager
+from . import config
 
 class SimpleScheduler:
     def __init__(self, title: str, command: str, on_calendar: str, overwrite: bool = False):

@@ -1,6 +1,6 @@
-from password_helper import get_root_password
+from .password_helper import get_root_password
 from dataclasses import dataclass
-import config
+from . import config 
 
 import subprocess
 
@@ -9,7 +9,7 @@ class CommandHandler:
     logger = config.get_logger(__name__)
     logger.info("create instance of CommandHandler")
 
-    def run_shell_command_with_input(self, command: str, input: str):
+    def run_shell_command_with_input(self, command: str, input: str=''):
         """run shell command as root .eg. with password as input
 
         Args:
@@ -21,6 +21,21 @@ class CommandHandler:
             [f"su -c '{command}'"],
             shell=True,
             input=f"{input}\n",
+            capture_output=True,
+            encoding="utf-8",
+            timeout=6,
+        )
+        self.logger.debug(
+            f"process is created: stdout: {process.stdout} || stderr: {process.stderr}"
+        )
+        return process
+
+    def run_shell_command(self, command: str):
+        """ run shell command simple usage"""
+        self.logger.debug("run_shell_command() func is called")
+        process = subprocess.run(
+            [f"{command}"],
+            shell=True,
             capture_output=True,
             encoding="utf-8",
             timeout=6,

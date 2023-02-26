@@ -8,11 +8,15 @@ __pycache__
 env
 
 # log
-log
+# log
 
 # testing
 testing
 test.py
+main.py
 
 # tmp
 ./scheduler/tmp.py
+
+# uml
+code_structure.md

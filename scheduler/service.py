@@ -1,5 +1,5 @@
-from file_manager import FileManager
-import config
+from .file_manager import FileManager
+from . import config
 
 
 class ServiceManager:
@@ -38,6 +38,7 @@ Description={self.description}
 
 
 [Service]
+User=root
 ExecStart={self.command}
 """
 
