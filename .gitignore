@@ -4,19 +4,17 @@ __pycache__
 # VSCODE
 .vscode
 
+# log
+schedulerx/log
+
 # Environment
 env
 
-# log
-# log
 
 # testing
-testing
+tests
 test.py
 main.py
-
-# tmp
-./scheduler/tmp.py
 
 # uml
 code_structure.md

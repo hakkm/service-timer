@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: SchedulerX
-Version: 0.0.1
+Version: 0.0.2
 Summary: Schedule a task using systemd services and timer
 Author-email: Khabir Abdelhakim <hakim1khabir2@gmail.com>
 Project-URL: Homepage, https://github.com/hakkm/service-timer

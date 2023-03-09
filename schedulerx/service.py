@@ -40,6 +40,9 @@ Description={self.description}
 [Service]
 User=root
 ExecStart={self.command}
+
+[Installer]
+WantedBy=multi-user.target
 """
 
 

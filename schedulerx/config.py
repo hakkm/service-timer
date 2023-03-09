@@ -1,11 +1,15 @@
 import logging
+import os
 
 
 def get_logger(name):
     logger = logging.getLogger(name)
     logger.setLevel(logging.DEBUG)
 
-    file_handler = logging.FileHandler(filename="scheduler/log/schedule.log")
+    if not os.path.exists("log"):
+        os.mkdir("log")
+
+    file_handler = logging.FileHandler(filename="log/service_timer.log")
     file_handler.setLevel(logging.DEBUG)
 
     console = logging.StreamHandler()
