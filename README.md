@@ -6,7 +6,7 @@
 
 ## Installation
 
-```pip install SchedulerX```
+```pip install schedulerx```
 
 ### Setting ROOT_PASSWORD to env variable 
 

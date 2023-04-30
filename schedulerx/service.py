@@ -1,5 +1,5 @@
-from .file_manager import FileManager
-from . import config
+from file_manager import FileManager
+# from . import config
 
 
 class ServiceManager:
@@ -14,23 +14,21 @@ class ServiceManager:
         filename: str,
         command: str,
         description: str = "",
-        overwrite: bool = False,
     ):
         self.filename: str = filename
         # todo: set a default description: title or the first part of filename
         # todo: "title" service
         self.description = description
         self.command = command
-        self.overwrite = overwrite
 
-        self.logger = config.get_logger(__name__)
-        self.logger.info("create an instance of ServiceManager")
+        # self.logger = config.get_logger(__name__)
+        # self.logger.info("create an instance of ServiceManager")
 
     def create_service_file(self):
-        self.logger.info("create service file")
-        self.file_manager = FileManager(self.filename, overwrite=self.overwrite)
+        # self.logger.info("create service file")
+        self.file_manager = FileManager(self.filename)
         self.file_manager.create_file(content=self._get_service_text())
-        self.logger.info("created service file")
+        # self.logger.info("created service file")
 
     def _get_service_text(self):
         return f"""[Unit]
@@ -38,7 +36,6 @@ Description={self.description}
 
 
 [Service]
-User=root
 ExecStart={self.command}
 
 [Installer]
@@ -48,6 +45,6 @@ WantedBy=multi-user.target
 
 if __name__ == "__main__":
     service_manager = ServiceManager(
-        filename="test.service", command="screensaver-command -l"
+        filename="test.service", command="siir tkhra"
     )
     service_manager.create_service_file()
