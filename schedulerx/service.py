@@ -1,5 +1,4 @@
 from file_manager import FileManager
-# from . import config
 
 
 class ServiceManager:
@@ -16,19 +15,12 @@ class ServiceManager:
         description: str = "",
     ):
         self.filename: str = filename
-        # todo: set a default description: title or the first part of filename
-        # todo: "title" service
         self.description = description
         self.command = command
 
-        # self.logger = config.get_logger(__name__)
-        # self.logger.info("create an instance of ServiceManager")
-
     def create_service_file(self):
-        # self.logger.info("create service file")
         self.file_manager = FileManager(self.filename)
         self.file_manager.create_file(content=self._get_service_text())
-        # self.logger.info("created service file")
 
     def _get_service_text(self):
         return f"""[Unit]

@@ -1,7 +1,6 @@
 from file_manager import FileManager
 from service import ServiceManager
 from run_command import CommandHandler
-# from . import config
 
 
 class TimerManager:
@@ -20,8 +19,6 @@ class TimerManager:
         service_manager: ServiceManager,
         description: str = "",
     ) -> None:
-        # self.logger = config.get_logger(__name__)
-        # self.logger.info("created instance of TimerManager")
 
         self.filename = filename
         self.description = description
@@ -32,9 +29,7 @@ class TimerManager:
         self.command_handler = CommandHandler()
 
     def create_timer(self):
-        # self.logger.debug(f"create timer file {self.filename}")
         self.file_manager.create_file(self._get_timer_text())
-        # self.logger.info(f"created timer file {self.filename}")
 
     def _get_timer_text(self):
         return f"""[Unit]
@@ -52,20 +47,18 @@ WantedBy=multi-user.target
 
     def start_timer(self):
         # reload daemon process
-        # self.logger.debug("reload daemon process")
         self.command_handler.run_shell_command("systemctl daemon-reload")
         # start timer
-        # self.logger.debug("start timer")
         self.command_handler.run_shell_command(
             f"systemctl start {self.filename}"
         )
 
-        # self.logger.debug("enable timer")
-        # self.command_handler.run_shell_command(
-        #     f"systemctl enable {self.filename}"
-        # )
+    def enable_timer(self):
 
-        # self.logger.info("timer is set successfully")
+        # self.logger.debug("enable timer")
+        self.command_handler.run_shell_command(
+            f"systemctl enable {self.filename}"
+        )
 
 
 if __name__ == "__main__":
