@@ -1,6 +1,3 @@
-import os
-
-
 SYSTEMD_SYSTEM_DIR = r"/etc/systemd/system"
 
 
@@ -9,7 +6,6 @@ class FileManager:
     directory"""
 
     def __init__(self, filename: str):
-
         self.filename = filename
 
     @property

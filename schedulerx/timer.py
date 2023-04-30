@@ -1,6 +1,6 @@
-from file_manager import FileManager
-from service import ServiceManager
-from run_command import CommandHandler
+from schedulerx import ServiceManager
+from schedulerx import CommandHandler
+from schedulerx import FileManager
 
 
 class TimerManager:
