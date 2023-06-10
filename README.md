@@ -1,5 +1,9 @@
 # SchedulerX
 
+## Description
+Python Package designed to facilitate the creation of services and timers for systemd-baseg systems.
+
+
 ## Authors
 
 - [@hakkm](https://www.github.com/hakkm)
